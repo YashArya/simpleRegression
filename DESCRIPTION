@@ -1,0 +1,14 @@
+Package: simpleRegression
+Version: 1.1
+Author: Yash Arya
+Maintainer: Yash Arya <yarya@wisc.edu>
+License: MIT + file LICENSE
+Title: Simple regression analysis
+VignetteBuilder: knitr
+Depends:
+    scatterplot3d
+Suggests:
+    knitr, rmarkdown, testthat
+Description: Simple regression analysis and plot for bmi826.
+URL: https://github.com/YashArya/simpleRegression
+RoxygenNote: 5.0.1

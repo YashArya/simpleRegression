@@ -1,0 +1,23 @@
+---
+title: The simpleRegression package
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{Introduction to simpleRegression}
+  \usepackage[utf8](inputenc)
+---
+
+The simpleRegression package contains the function: `simpleRegression`
+
+The `simpleRegression` function returns the Root Mean Square Error computed between the estimated values after regression and actual values, and generates a scatter plot.
+
+```{r simpleRegression}
+library(simpleRegression)
+library(scatterplot3d) # needed here when requireNamespace() used in package
+set.seed(1101, kind = NULL, normal.kind = NULL)
+M <- array(rnorm(10 * 5, mean = 0, sd = 1), c(10, 5))
+RMSE_calculated = simpleRegression(M)
+```
+
+The source is on
+[GitHub](https://github.com/YashArya/simpleRegression).
