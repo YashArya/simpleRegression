@@ -1,35 +1,20 @@
-Plot the ![Rainbow!](rainbow.png)
+Simple Regression!
 =================
 
-If you want high-quality, scientifically-researched color schemes for your R plots, check out the [RColorBrewer package](https://cran.r-project.org/package=RColorBrewer). If you want your plots to be colored the same way as packs of Skittles (or M&Ms), then this package (RSkittleBrewer) is the way to go.
-
-### install
-with `devtools`:
-
-```S
-devtools::install_github('RSkittleBrewer', 'alyssafrazee')
-```
+Performing Simple Regression and plot for BMI 826.
 
 ### use
-There are only three functions in this package. 
+There is only one function in this package. 
 
-Call `RSkittleBrewer` on a flavor to get a vector of R color names that correspond to that Skittle flavor. 
+Call `simpleRegression` with a N x 5 matrix. First four columns are used as inputs for regression, 5th column has reference values.
+A Root Mean Square Error is generated and returned, and a 3D scatter plot is generated. 
 
 ```S
-original_colors = RSkittleBrewer('original')
-tropical_colors = RSkittleBrewer('tropical')
-wildberry_colors = RSkittleBrewer('wildberry')
-smarties_colors = RSkittleBrewer('smarties')
-mm_colors = RSkittleBrewer('M&M')
-```
-In this project, M&M is a Skittle flavor. It's cool. The British also wanted Smarties (thanks [Andy](https://github.com/AndySouth))!
+M <- array(rnorm(10 * 5, mean = 0, sd = 1), c(10, 5))
+RMSE_calculated = simpleRegression(M)
+RMSE = simpleRegression(M)
+``` 
 
-`plotSkittles()` and `plotSmarties()` make super awesome illustrations of the color schemes. 
-
-### I must know more!
-Here's a [blog post](http://alyssafrazee.com/RSkittleBrewer.html) I wrote for you. 
-
-### who else should I thank?  
+### Thank you Karl for helping make this into a legitimate package
 * [Karl](https://github.com/kbroman), for helping make this into a legitimate package
-* [Jeff and Rafa](http://simplystatistics.org/), for inspiration
 # simpleRegression
